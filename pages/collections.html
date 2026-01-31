@@ -92,7 +92,7 @@
         .mosaic-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 280px);
+            grid-template-rows: repeat(2, 200px); /* Reduced from 280px for a 'wide' feel */
             gap: 1.5rem;
         }
 
@@ -102,6 +102,7 @@
             overflow: hidden;
             cursor: pointer;
             background: #eee;
+            height: 100%; /* Ensure it fills the grid cell */
         }
 
         .collection-item img {
