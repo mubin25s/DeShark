@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders | Deshark Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <a href="../index.html" class="admin-logo">DESHARK</a>
+        <ul class="admin-nav">
+            <li><a href="dashboard.html" class="admin-nav-link"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="products.html" class="admin-nav-link"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="orders.html" class="admin-nav-link active"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li style="margin-top: auto; padding-top: 2rem;">
+                <a href="../index.html" class="admin-nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="admin-header">
+            <div>
+                <p style="color: #999; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Sales</p>
+                <h2>Orders</h2>
+            </div>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <select class="form-input" style="padding: 0.7rem 1.2rem; width: auto; border-radius: 12px; background: #fff; border: 1px solid rgba(0,0,0,0.05);">
+                    <option>All Status</option>
+                    <option>Pending</option>
+                    <option>Shipped</option>
+                    <option>Delivered</option>
+                </select>
+                <div class="user-profile" style="display: flex; align-items: center; gap: 1rem;">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=E94F37&color=fff"
+                        style="width: 45px; height: 45px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Date</th>
+                        <th>Total</th>
+                        <th>Payment</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#DS88291</td>
+                        <td>John Doe</td>
+                        <td>Jan 26, 2026</td>
+                        <td>$114.00</td>
+                        <td>Credit Card</td>
+                        <td><span class="status-badge status-warning">Pending</span></td>
+                        <td>
+                            <button class="admin-btn-action"><i class="fas fa-eye"></i> Details</button>
+                            <button class="admin-btn-action ship-btn"><i class="fas fa-shipping-fast"></i> Ship</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#DS88290</td>
+                        <td>Jane Smith</td>
+                        <td>Jan 25, 2026</td>
+                        <td>$45.00</td>
+                        <td>PayPal</td>
+                        <td><span class="status-badge status-success">Delivered</span></td>
+                        <td>
+                            <button class="admin-btn-action"><i class="fas fa-eye"></i> Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

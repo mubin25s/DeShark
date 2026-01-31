@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Deshark Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="admin-body">
+
+    <!-- Sidebar -->
+    <aside class="admin-sidebar">
+        <a href="../index.html" class="admin-logo">DESHARK</a>
+        <ul class="admin-nav">
+            <li><a href="dashboard.html" class="admin-nav-link"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="products.html" class="admin-nav-link active"><i class="fas fa-box"></i> Products</a></li>
+            <li><a href="orders.html" class="admin-nav-link"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+            <li style="margin-top: auto; padding-top: 2rem;">
+                <a href="../index.html" class="admin-nav-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <div class="admin-header">
+            <div>
+                <p style="color: #999; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 0.5rem;">Inventory</p>
+                <h2>Products</h2>
+            </div>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <button class="btn btn-primary" style="padding: 0.7rem 1.8rem; border-radius: 12px;"
+                    onclick="openProductModal()">+ Add Product</button>
+                <div class="user-profile" style="display: flex; align-items: center; gap: 1rem;">
+                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=E94F37&color=fff"
+                        style="width: 45px; height: 45px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">Image</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Injected by JS -->
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Product</h3>
+                <button class="modal-close" onclick="closeProductModal()">&times;</button>
+            </div>
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                <div class="form-group">
+                    <label class="form-label">Product Name</label>
+                    <input type="text" id="pName" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Category</label>
+                        <select id="pCategory" required>
+                            <option value="T-Shirts">T-Shirts</option>
+                            <option value="Jackets">Jackets</option>
+                            <option value="Shirts">Shirts</option>
+                            <option value="Pants">Pants</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Price</label>
+                        <input type="number" id="pPrice" step="0.01" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Image URL</label>
+                    <input type="url" id="pImage" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea id="pDescription" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

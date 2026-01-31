@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Deshark</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">DESHARK</a>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html" style="color: var(--accent-color);"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="section" style="padding: 4rem 0;">
+        <div class="container">
+            <h1 style="margin-bottom: 2rem;">Your Cart</h1>
+
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="cart-item-info">
+                                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+                                    alt="Item" class="cart-item-img">
+                                <div>
+                                    <p style="font-weight: 600;">Classic White Tee</p>
+                                    <p style="font-size: 0.9rem; color: #999;">Size: M</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$25.00</td>
+                        <td>
+                            <input type="number" value="1" min="1" class="quantity-input" style="width: 60px;">
+                        </td>
+                        <td style="font-weight: 600;">$25.00</td>
+                        <td><span class="cart-action"><i class="fas fa-trash"></i> Remove</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-item-info">
+                                <img src="https://images.unsplash.com/photo-1620799140408-ed5341cd2431?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80"
+                                    alt="Item" class="cart-item-img">
+                                <div>
+                                    <p style="font-weight: 600;">Urban Jacket</p>
+                                    <p style="font-size: 0.9rem; color: #999;">Size: L</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$89.00</td>
+                        <td>
+                            <input type="number" value="1" min="1" class="quantity-input" style="width: 60px;">
+                        </td>
+                        <td style="font-weight: 600;">$89.00</td>
+                        <td><span class="cart-action"><i class="fas fa-trash"></i> Remove</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row" style="margin-top: 1.5rem;">
+                    <span>Subtotal</span>
+                    <span>$114.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span>$114.00</span>
+                </div>
+                <a href="checkout.html" class="btn btn-primary"
+                    style="width: 100%; text-align: center; margin-top: 1.5rem;">Proceed to Checkout</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Scrolling Marquee -->
+        <div class="footer-marquee">
+            <div class="marquee-content">
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+                <span>PREMIUM APPAREL</span>
+                <span>EST 2026</span>
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+            </div>
+        </div>
+
+        <div class="container footer-content">
+            <div class="footer-top-grid">
+                <!-- Brand Col -->
+                <div class="footer-col footer-brand">
+                    <h2>DESHARK</h2>
+                    <p>Premium apparel meticulously crafted for the modern gentleman. Redefining the standard of style since 2026.</p>
+                </div>
+
+                <!-- Links Col 1 -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Collections</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col 2 -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ Section</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Col -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Stay in the Loop</h4>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #888;">Subscribe for exclusive drops and early access.</p>
+                    <form class="newsletter-form" action="#">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Deshark. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>

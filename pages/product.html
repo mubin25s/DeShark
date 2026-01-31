@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic White Tee | Deshark</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">DESHARK</a>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link" style="color: var(--accent-color);">Shop</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <section class="product-hero-section">
+        <div class="container product-detail-container">
+                <!-- Background Typography Motif -->
+                <div class="decorative-bg-text">DESHARK</div>
+
+                <!-- Left: Gallery (Floating Image) -->
+                <div class="product-main-gallery floating-image-wrapper">
+                    <div class="design-stamp">DS/26</div>
+                    <img src="" alt="Product Image" id="mainImg" class="hero-product-image">
+                </div>
+
+                <!-- Right: Info (Glassmorphic Card) -->
+                <div class="product-premium-info glass-card">
+                    <div class="vertical-badge">Premium Edition</div>
+                    <span id="qvCategory" class="premium-category">Category</span>
+                    <h1 id="qvName" class="premium-title">Product Name</h1>
+                    
+                    <div id="qvRating" class="premium-rating">
+                        <!-- Stars will be injected by JS -->
+                    </div>
+
+                    <p id="qvPrice" class="premium-price">$0.00</p>
+                    
+                    <p id="qvDescription" class="premium-description">
+                        Loading description...
+                    </p>
+
+                    <div class="premium-options">
+                        <div class="option-group">
+                            <label>Select Size</label>
+                            <div class="size-selection-grid">
+                                <button class="size-btn" data-size="S">S</button>
+                                <button class="size-btn active" data-size="M">M</button>
+                                <button class="size-btn" data-size="L">L</button>
+                                <button class="size-btn" data-size="XL">XL</button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label>Quantity</label>
+                            <div class="quantity-control">
+                                <input type="number" id="qvQty" value="1" min="1" class="premium-qty-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-actions">
+                        <button id="qvAddToCart" class="btn btn-primary premium-add-btn">
+                            ADD TO CART
+                        </button>
+                        <button class="btn btn-outline premium-wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+
+                    <div class="premium-shipping-info">
+                        <p><i class="fas fa-truck"></i> Free express shipping on orders over $150</p>
+                        <p><i class="fas fa-undo"></i> 30-day premium return policy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs: Details, Reviews -->
+    <section class="section" style="padding-bottom: 4rem;">
+        <div class="container">
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <div class="tab-btn active">Description</div>
+                    <div class="tab-btn">Reviews (45)</div>
+                    <div class="tab-btn">Size Guide</div>
+                </div>
+                <div class="tab-content" style="max-width: 800px; color: #555; line-height: 1.8;">
+                    <div id="tab-description" class="tab-pane active">
+                        <p>Designed for the modern minimalist, our Classic White Tee features a tailored fit that isn't
+                            too
+                            tight or too loose. The fabric is pre-washed to prevent shrinking and ensure a soft feel
+                            from
+                            day one. Reinforced stitching at the seams adds durability, making it your go-to shirt for
+                            any
+                            occasion.</p>
+                    </div>
+                    <div id="tab-reviews" class="tab-pane" style="display: none;">
+                        <div id="reviews-list">
+                            <!-- Populated by JS -->
+                            <p>No reviews yet. Be the first to write one!</p>
+                        </div>
+
+                        <div class="add-review"
+                            style="margin-top: 2rem; border-top: 1px solid #eee; padding-top: 2rem;">
+                            <h4>Write a Review</h4>
+                            <select id="review-rating" style="padding: 0.5rem; margin-bottom: 1rem;">
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+                            <textarea id="review-text" placeholder="Your review..."
+                                style="width: 100%; height: 100px; padding: 1rem; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                            <button onclick="submitReview(new URLSearchParams(window.location.search).get('id'))"
+                                class="btn btn-primary" style="margin-top: 1rem;">Submit Review</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section related-products-section">
+        <div class="container">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2.5rem;">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Product" class="product-image">
+                        <div class="quick-view-overlay" onclick="window.location.href='product.html?id=2'">
+                            VIEW DETAILS
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">DESHARK</span>
+                        <h3 class="product-name"><a href="product.html?id=2">Oxford Shirt</a></h3>
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <p class="product-price">$45.00</p>
+                            <button class="btn-quick-add">QUICK ADD +</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Product" class="product-image">
+                        <div class="quick-view-overlay" onclick="window.location.href='product.html?id=3'">
+                            VIEW DETAILS
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">DESHARK</span>
+                        <h3 class="product-name"><a href="product.html?id=3">Casual Hoodie</a></h3>
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <p class="product-price">$60.00</p>
+                            <button class="btn-quick-add">QUICK ADD +</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Product" class="product-image">
+                        <div class="quick-view-overlay" onclick="window.location.href='product.html?id=4'">
+                            VIEW DETAILS
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">DESHARK</span>
+                        <h3 class="product-name"><a href="product.html?id=4">Denim Jeans</a></h3>
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <p class="product-price">$49.99</p>
+                            <button class="btn-quick-add">QUICK ADD +</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Product" class="product-image">
+                        <div class="quick-view-overlay" onclick="window.location.href='product.html?id=5'">
+                            VIEW DETAILS
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">DESHARK</span>
+                        <h3 class="product-name"><a href="product.html?id=5">Slim Chinos</a></h3>
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <p class="product-price">$55.00</p>
+                            <button class="btn-quick-add">QUICK ADD +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Scrolling Marquee -->
+        <div class="footer-marquee">
+            <div class="marquee-content">
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+                <span>PREMIUM APPAREL</span>
+                <span>EST 2026</span>
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+            </div>
+        </div>
+
+        <div class="container footer-content">
+            <div class="footer-top-grid">
+                <!-- Brand Col -->
+                <div class="footer-col footer-brand">
+                    <h2>DESHARK</h2>
+                    <p>Premium apparel meticulously crafted for the modern gentleman. Redefining the standard of style since 2026.</p>
+                </div>
+
+                <!-- Links Col 1 -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Collections</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col 2 -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ Section</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Col -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Stay in the Loop</h4>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #888;">Subscribe for exclusive drops and early access.</p>
+                    <form class="newsletter-form" action="#">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Deshark. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/wishlist.js"></script>
+    <script src="../js/product.js"></script>
+</body>
+
+</html>

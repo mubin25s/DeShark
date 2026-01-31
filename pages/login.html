@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Deshark</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">DESHARK</a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="auth-wrapper">
+        <div class="container-auth" id="container">
+            <div class="form-container sign-up-container">
+                <form id="registerForm" action="#">
+                    <h1>Join The <span style="color: var(--accent-color);">Elite.</span></h1>
+                    <p class="social-text">Unlock exclusive drops and personalized recommendations.</p>
+                    <input type="text" placeholder="Full Name" required />
+                    <input type="email" placeholder="Email Address" required />
+                    <input type="password" placeholder="Set Password" required />
+                    <button class="btn-red">Create Account</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form id="loginForm" action="#">
+                    <h1>Sign In</h1>
+                    <p class="social-text">Welcome back to the terminal.</p>
+                    <input type="email" placeholder="Email" required />
+                    <input type="password" placeholder="Password" required />
+                    <a href="#">Forgot your password?</a>
+                    <button class="btn-red">Sign In</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Access <span style="color: var(--accent-color);">Granted?</span></h1>
+                        <p>If you have already established your credentials, proceed to the terminal.</p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>Join The <span style="color: #ffffff;">Revolution.</span></h1>
+                        <p>Enter your personal details and start your journey with us</p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+
+</html>

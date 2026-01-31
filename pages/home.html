@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Deshark</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">DESHARK</a>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link" style="color: var(--accent-color);">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <header class="hero-section"
+        style="position: relative; height: 90vh; background-color: #f4f4f4; overflow: hidden; display: flex; align-items: center;">
+        <div class="container"
+            style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 2;">
+            <div class="hero-content fade-in">
+                <p
+                    style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 1rem; color: var(--accent-color);">
+                    New Arrival</p>
+                <h1 style="font-size: 5rem; margin-bottom: 1.5rem; line-height: 0.9;">SUMMER<br><span
+                        style="color: transparent; -webkit-text-stroke: 1px var(--accent-color);">COLLECTION</span><br>2026
+                </h1>
+                <p style="font-size: 1.1rem; margin-bottom: 2.5rem; max-width: 400px; color: #666;">Discover the new
+                    standard of comfort and style. Meticulously crafted for the modern gentleman.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="shop.html" class="btn btn-primary">Shop Collection</a>
+                    <a href="#" class="btn btn-outline">Lookbook</a>
+                </div>
+            </div>
+            <div class="hero-image" style="position: relative;">
+                <img src="https://images.unsplash.com/photo-1488161628813-99425260bddc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    style="width: 100%; height: 600px; object-fit: cover; border-radius: 8px; box-shadow: 20px 20px 0px rgba(0,0,0,0.05);">
+                <div
+                    style="position: absolute; bottom: -20px; left: -20px; background: white; padding: 1.5rem; border-radius: 4px; box-shadow: var(--shadow-lg);">
+                    <p style="font-weight: 700; margin: 0; font-size: 1.2rem;">50% OFF</p>
+                    <p style="margin: 0; font-size: 0.8rem;">On selected items</p>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Background Element -->
+        <div
+            style="position: absolute; top: 0; right: 0; width: 45%; height: 100%; background: linear-gradient(to right, rgba(244,244,244,1) 0%, rgba(244,244,244,0) 20%), url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1200&auto=format&fit=crop'); background-size: cover; background-position: center; z-index: 1; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); opacity: 0.4; filter: grayscale(100%) contrast(1.1);">
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="section" style="padding: 4rem 0;">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Shop by Category</h2>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <!-- Category 1 -->
+                <div style="position: relative; height: 300px; overflow: hidden; border-radius: 8px; cursor: pointer;">
+                    <img src="../photos/casual.png"
+                        alt="Casual" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;">
+                    <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                        <h3>Casual</h3>
+                    </div>
+                </div>
+                <!-- Category 2 -->
+                <div style="position: relative; height: 300px; overflow: hidden; border-radius: 8px; cursor: pointer;">
+                    <img src="../photos/formal.png"
+                        alt="Formal" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;">
+                    <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                        <h3>Formal</h3>
+                    </div>
+                </div>
+                <!-- Category 3 -->
+                <div style="position: relative; height: 300px; overflow: hidden; border-radius: 8px; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop"
+                        alt="Active" style="width: 100%; height: 100%; object-fit: cover; transition: 0.5s;">
+                    <div style="position: absolute; bottom: 20px; left: 20px; color: white;">
+                        <h3>Activewear</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Selling Products -->
+    <section class="section" style="padding: 4rem 0; background-color: #fafafa;">
+        <div class="container">
+            <div class="flex justify-between items-center" style="margin-bottom: 3rem;">
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <span style="width: 40px; height: 3px; background: var(--accent-color); border-radius: 2px;"></span>
+                    <h2 style="margin: 0; text-transform: uppercase; letter-spacing: -1px;">Trending Now</h2>
+                </div>
+                <a href="shop.html" class="btn-view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;" id="featured-products">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Scrolling Marquee -->
+        <div class="footer-marquee">
+            <div class="marquee-content">
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+                <span>PREMIUM APPAREL</span>
+                <span>EST 2026</span>
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+            </div>
+        </div>
+
+        <div class="container footer-content">
+            <div class="footer-top-grid">
+                <!-- Brand Col -->
+                <div class="footer-col footer-brand">
+                    <h2>DESHARK</h2>
+                    <p>Premium apparel meticulously crafted for the modern gentleman. Redefining the standard of style since 2026.</p>
+                </div>
+
+                <!-- Links Col 1 -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Collections</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Col 2 -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ Section</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Col -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Stay in the Loop</h4>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #888;">Subscribe for exclusive drops and early access.</p>
+                    <form class="newsletter-form" action="#">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Deshark. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/wishlist.js"></script> <!-- Ensure wishlist logic is available -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = db.getProducts().slice(0, 4); // Top 4
+            const container = document.getElementById('featured-products');
+
+            container.innerHTML = '';
+
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <div class="quick-view-overlay" onclick="window.location.href='product.html?id=${product.id}'">
+                            VIEW DETAILS
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-brand">${product.category || 'DESHARK'}</span>
+                        <h3 class="product-name"><a href="product.html?id=${product.id}">${product.name}</a></h3>
+                        <div class="flex" style="justify-content: space-between; align-items: center;">
+                            <p class="product-price">$${product.price.toFixed(2)}</p>
+                            <button class="btn-quick-add" onclick="quickAdd(${product.id})">QUICK ADD +</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        });
+
+        function quickAdd(id) {
+            const product = db.getProduct(id);
+            if (product) {
+                db.addToCart({ ...product, qty: 1, size: 'M' });
+                alert(`${product.name} added to cart!`);
+            }
+        }
+    </script>
+</body>
+
+</html>

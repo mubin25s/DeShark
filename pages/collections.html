@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | Deshark</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">DESHARK</a>
+            <ul class="nav-links">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="shop.html" class="nav-link">Shop</a></li>
+                <li><a href="collections.html" class="nav-link" style="color: var(--accent-color);">Collections</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="login.html"><i class="fas fa-user"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="section" style="background: var(--bg-color); padding: 5rem 0 3rem; text-align: left; position: relative; overflow: hidden;">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div style="display: flex; align-items: flex-end; gap: 2rem;">
+                <h1 style="font-size: 5rem; line-height: 0.8; margin: 0; letter-spacing: -4px;">CURATED<br><span style="color: transparent; -webkit-text-stroke: 1px var(--accent-color);">SETS</span></h1>
+                <p style="color: #888; max-width: 300px; margin: 0; font-size: 0.9rem; line-height: 1.4; border-left: 1px solid #ddd; padding-left: 1.5rem;">
+                    Meticulously selected pieces that define the modern wardrobe. Seasonal drops and timeless essentials.
+                </p>
+            </div>
+        </div>
+        <div style="position: absolute; top: 0; right: -5%; font-size: 15rem; font-weight: 900; color: rgba(0,0,0,0.02); pointer-events: none; line-height: 1;">COLLECTION</div>
+    </header>
+
+    <!-- Collections Mosaic -->
+    <section class="section" style="padding: 2rem 0 6rem;">
+        <div class="container">
+            <div class="mosaic-grid">
+                <!-- Large Item -->
+                <div class="collection-item large" onclick="window.location.href='shop.html'">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop" alt="Summer">
+                    <div class="collection-content">
+                        <span class="collection-tag">New Season</span>
+                        <h2>Summer Essentials</h2>
+                        <span class="explore-btn">Explore Collection <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                
+                <!-- Small Item 1 -->
+                <div class="collection-item small" onclick="window.location.href='shop.html'">
+                    <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=800&auto=format&fit=crop" alt="Winter">
+                    <div class="collection-content">
+                        <h2>Winter Warmth</h2>
+                        <span class="explore-btn">Shop Now</span>
+                    </div>
+                </div>
+
+                <!-- Small Item 2 -->
+                <div class="collection-item small" onclick="window.location.href='shop.html'">
+                    <img src="https://images.unsplash.com/photo-1542272201-98782d499295?q=80&w=800&auto=format&fit=crop" alt="Streetwear">
+                    <div class="collection-content">
+                        <h2>Streetwear Vibes</h2>
+                        <span class="explore-btn">Shop Now</span>
+                    </div>
+                </div>
+
+                <!-- Wide Item -->
+                <div class="collection-item wide" onclick="window.location.href='shop.html'">
+                    <img src="https://images.unsplash.com/photo-1507680434567-5739c8fbe69d?q=80&w=1200&auto=format&fit=crop" alt="Formal">
+                    <div class="collection-content">
+                        <span class="collection-tag">Premium</span>
+                        <h2>Formal Elegance</h2>
+                        <span class="explore-btn">Explore Collection <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 280px);
+            gap: 1.5rem;
+        }
+
+        .collection-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            background: #eee;
+        }
+
+        .collection-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .collection-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .collection-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .collection-item.wide {
+            grid-column: span 2;
+        }
+
+        .collection-item.small {
+            grid-column: span 1;
+        }
+
+        .collection-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+        }
+
+        .collection-tag {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            background: rgba(255,255,255,0.9);
+            padding: 4px 8px;
+            width: fit-content;
+            border-radius: 2px;
+        }
+
+        .collection-item h2 {
+            font-size: 1.8rem;
+            margin: 0 0 1rem;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .collection-item.large h2 {
+            font-size: 2.5rem;
+        }
+
+        .explore-btn {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .collection-item:hover .explore-btn {
+            opacity: 1;
+            gap: 0.8rem;
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 992px) {
+            .mosaic-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+            .collection-item.large, .collection-item.wide, .collection-item.small {
+                grid-column: span 1;
+                height: 350px;
+            }
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-marquee">
+            <div class="marquee-content">
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+                <span>PREMIUM APPAREL</span>
+                <span>EST 2026</span>
+                <span>NEW DROPS EVERY FRIDAY</span>
+                <span>FREE WORLDWIDE SHIPPING ABOVE $200</span>
+            </div>
+        </div>
+        <div class="container footer-content">
+            <div class="footer-top-grid">
+                <div class="footer-col footer-brand">
+                    <h2>DESHARK</h2>
+                    <p>Premium apparel meticulously crafted for the modern gentleman. Redefining the standard of style since 2026.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Collections</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ Section</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Stay in the Loop</h4>
+                    <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #888;">Subscribe for exclusive drops and early access.</p>
+                    <form class="newsletter-form" action="#">
+                        <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Deshark. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
